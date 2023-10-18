@@ -21,7 +21,7 @@ Event camera and stereo vision
 
 ## About this blog
 
-This blog is forked from  [jekyll-theme-chirpy](https://github.com/cotes2020/jekyll-theme-chirpy)
+本站采用 [Jekyll](https://jekyllrb.com/) 主题 [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy)
 
 ### Picgo
 
