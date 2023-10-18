@@ -31,11 +31,11 @@ mermaid: true
 
 ## 闪烁棋盘格与标定界面
 
-![intrinsics_recording_visu](https://raw.githubusercontent.com/2c984r83y/2c984r83y.github.io/main/images/intrinsics_recording_visu.png)
+![intrinsics_recording_visu](https://raw.githubusercontent.com/2c984r83y/2c984r83y.github.io/master/images/intrinsics_recording_visu.png)
 
 ## 代码流水线结构
 
-![intrinsics_recording_pipeline](https://raw.githubusercontent.com/2c984r83y/2c984r83y.github.io/main/images/intrinsics_recording_pipeline.png)
+![intrinsics_recording_pipeline](https://raw.githubusercontent.com/2c984r83y/2c984r83y.github.io/master/images/intrinsics_recording_pipeline.png)
 
 ### Trail Stage
 
@@ -78,7 +78,7 @@ Pattern Detector有两种：
 
 ### Display Stage
 
-![20230919095631](https://raw.githubusercontent.com/2c984r83y/2c984r83y.github.io/main/images/20230919095631.png)
+![20230919095631](https://raw.githubusercontent.com/2c984r83y/2c984r83y.github.io/master/images/20230919095631.png)
 
 ## 计算内参
 
