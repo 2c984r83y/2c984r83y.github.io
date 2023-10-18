@@ -70,11 +70,11 @@ theme_mode: # [light|dark]
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn: "https://raw.githubusercontent.com/2c984r83y/2c984r83y.github.io/master"
+img_cdn: "https://chirpy-img.netlify.app"
 
 # the avatar on sidebar, support local or CORS resources
-avatar: "images/xingtong_salute.png"
-# avatar: "https://github.com/2c984r83y/2c984r83y.github.io/blob/master/images/xingtong_salute.png"
+avatar: "/commons/avatar.jpg"
+
 # boolean type, the global switch for TOC in posts.
 toc: true
 
