@@ -3,14 +3,14 @@ title: Prophesee Mono Calibration
 author: 2c984r83y
 date: 2023-09-19 11:33:00 +0800
 categories: [Blogging]
-tags: [Event-based Vision]
+tags: []
 pin: false
 math: true
 mermaid: true
 ---
 ## Intrinsics Calibration
 
-***
+---
 
 **建立相机成像几何模型并矫正透镜畸变**。
 
@@ -20,15 +20,13 @@ mermaid: true
 
 代码路径如下所示：
 
-> <install-prefix>/share/metavision/sdk/calibration/apps/metavision_mono_calibration_recording
+> `<install-prefix>`/share/metavision/sdk/calibration/apps/metavision_mono_calibration_recording
 
 - 使用检测数据进行相机内参计算：
 
 代码路径如下所示：
 
-> <install-prefix>/share/metavision/sdk/calibration/apps/metavision_mono_calibration
-
-
+> `<install-prefix>`/share/metavision/sdk/calibration/apps/metavision_mono_calibration
 
 ## 闪烁棋盘格与标定界面
 
@@ -40,7 +38,7 @@ mermaid: true
 
 ### Trail Stage
 
-使用`Metavision::TrailFilterAlgorithmT`
+使用 `Metavision::TrailFilterAlgorithmT`
 
 作用是降噪、减少事件数量，Filter的时间窗口很宽，所以事件要么是极性改变要么是新的事件，而不是同一事件多次输出。
 
@@ -53,7 +51,6 @@ mermaid: true
 Pattern Detector有两种：
 
 - `Metavision::BlinkingFrameGeneratorAlgorithm`
-
 - `Metavision::BlinkingDotsGridDetectorAlgorithm`
 
 ### Logger Stage
@@ -84,7 +81,7 @@ Pattern Detector有两种：
 
 ## 计算内参
 
-`metavision_mono_calibration`使用`metavision_mono_calibration_recording`的2Dpattern detector生成相机内参。
+`metavision_mono_calibration`使用 `metavision_mono_calibration_recording`的2Dpattern detector生成相机内参。
 
 在 non-fronto parallel distorted输入图像的情况下，准确估计定义校准图案的几何形状的关键点可能会出错。
 
@@ -96,9 +93,9 @@ Pattern Detector有两种：
 
 distortion vector: [k1,k2,p1,p2,k3] ,
 
-radial coefficients: k1, k2, k3 
+radial coefficients: k1, k2, k3
 
-tangential coefficients:p1, p2 
+tangential coefficients:p1, p2
 
 示例:
 
@@ -129,4 +126,3 @@ Intrinsics, extrinsics and per view RMS reprojection errors have been saved in /
 ## Reference
 
 [Intrinsics Calibration — Metavision SDK Docs 4.3.0 documentation](https://docs.prophesee.ai/stable/samples/modules/calibration/intrinsics.html?highlight=calibrate)
-
