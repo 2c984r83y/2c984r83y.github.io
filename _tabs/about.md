@@ -21,12 +21,13 @@ Event camera and stereo vision
 
 ## About this blog
 
-本站采用 [Jekyll](https://jekyllrb.com/) 主题 [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy)
+本站采用 [Jekyll](https://jekyllrb.com/) 主题 [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy)  
+
+曾经使用 [Jekyll](https://jekyllrb.com/) 主题 [LOFFER](https://fromendworld.github.io/LOFFER/),你可以 [点击这里](https://2c984r83y.github.io/first_blog/) 看看过去的样子
 
 ### Picgo
 
-使用Picgo上传图片，Github作为图床~~我知道这样不好但是我懒~~
-上传剪贴板中的图片：`Ctrl + Alt + u`
-custom URL要填写：`https://raw.githubusercontent.com/YOURID/YOURID.github.io/master`
+本站使用Picgo上传图片，Github作为图床 ~~我知道这样不好但是我懒~~
+`Ctrl + Alt + u`上传剪贴板中的图片
 
-[在Vscode中使用Picgo插件](https://picgo.github.io/PicGo-Doc/zh/guide/config.html#github%E5%9B%BE%E5%BA%8A)
+Ref: [在Vscode中使用Picgo插件](https://picgo.github.io/PicGo-Doc/zh/guide/config.html#github%E5%9B%BE%E5%BA%8A)
