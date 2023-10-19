@@ -8,7 +8,7 @@ pin: true
 math: true
 mermaid: true
 image:
-  path: /images/xingtong_salute.png
+  path: /images/edgerunner.jpg
   alt: HelloWorld!
 ---
 ## HelloWorld!
