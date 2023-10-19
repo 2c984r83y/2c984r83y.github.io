@@ -45,4 +45,16 @@ order: 4
   allowfullscreen
 ></iframe>
 
+<iframe
+  class="embed-video bilibili"
+  loading="lazy"
+  src="https://player.bilibili.com/player.html?aid=786483310&bvid=BV1v14y1z7MV&cid=1212521934&page=1&high_quality=1&danmaku=0"
+  title="BiliBiile video player"
+  frameborder="0"
+  allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" frameborder="0" 
+  sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"
+  allowfullscreen
+></iframe>
+
+
 <iframe src="https://player.bilibili.com/player.html?aid=786483310&bvid=BV1v14y1z7MV&cid=1212521934&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" frameborder="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
