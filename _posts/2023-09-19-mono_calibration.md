@@ -41,7 +41,7 @@ mermaid: true
 
 使用 `Metavision::TrailFilterAlgorithmT`
 
-作用是降噪、减少事件数量，Filter的时间窗口很宽，所以事件要么是极性改变要么是新的事件，而不是同一事件多次输出。
+作用是降噪、减少事件数量，Filter 的时间窗口很宽，所以事件要么是极性改变要么是新的事件，而不是同一事件多次输出。
 
 ### Pattern Detector Stage
 
@@ -49,26 +49,26 @@ mermaid: true
 
 对事件进行关键点检测，同时过滤掉边缘不准确的关键点。
 
-Pattern Detector有两种：
+Pattern Detector 有两种：
 
 - `Metavision::BlinkingFrameGeneratorAlgorithm`
 - `Metavision::BlinkingDotsGridDetectorAlgorithm`
 
 ### Logger Stage
 
-收集检测结果，记录为json文件。
+收集检测结果，记录为 json 文件。
 
 ### Pattern Frame Generator Stage
 
 `Metavision::CalibrationDetectionFrameGenerator`
 
-生成包含pattern detection的图像帧。
+生成包含 pattern detection 的图像帧。
 
 ### Frame Generation Stage
 
 `Metavision::PeriodicFrameGenerationAlgorithm`
 
-根据事件生成图像帧并发送到下一stage
+根据事件生成图像帧并发送到下一 stage.
 
 ### Frame Composition Stage
 
@@ -82,9 +82,9 @@ Pattern Detector有两种：
 
 ## 计算内参
 
-`metavision_mono_calibration`使用 `metavision_mono_calibration_recording`的2Dpattern detector生成相机内参。
+`metavision_mono_calibration` 使用 `metavision_mono_calibration_recording `的 2Dpattern detector 生成相机内参。
 
-在 non-fronto parallel distorted输入图像的情况下，准确估计定义校准图案的几何形状的关键点可能会出错。
+在 non-fronto parallel distorted 输入图像的情况下，准确估计定义校准图案的几何形状的关键点可能会出错。
 
 该应用程序允许使用额外的细化步骤，该步骤使用第一次相机标定的数据估计来将输入图像重投影规范的前向平行图像，然后用该图像于精确定位关键点并重新估计相机参数。
 
@@ -92,11 +92,11 @@ Pattern Detector有两种：
 
 对于针孔相机模型而言：
 
-distortion vector: [k1,k2,p1,p2,k3] ,
+> distortion vector: [k1,k2,p1,p2,k3] ,
 
-radial coefficients: k1, k2, k3
+> radial coefficients: k1, k2, k3
 
-tangential coefficients:p1, p2
+> tangential coefficients:p1, p2
 
 示例:
 
