@@ -7,5 +7,8 @@ tags: [HelloWorld]
 pin: true
 math: true
 mermaid: true
+image:
+  path: /images/xingtong_salute.png
+  alt: HelloWorld!
 ---
 ## HelloWorld!
