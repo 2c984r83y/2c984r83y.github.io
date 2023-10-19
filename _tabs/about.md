@@ -27,8 +27,9 @@ Event camera and stereo vision
 
 ## Picgo
 
-本站使用Picgo上传图片，Github作为图床 ~~我知道这样不好但是我懒~~
-`Ctrl + Alt + u`上传剪贴板中的图片
+本站使用Picgo上传图片，Github作为图床 ~~我知道这样不好但是我懒~~  
+
+`Ctrl + Alt + u`上传剪贴板中的图片  
 
 Ref: [在Vscode中使用Picgo插件](https://picgo.github.io/PicGo-Doc/zh/guide/config.html#github%E5%9B%BE%E5%BA%8A)
 
