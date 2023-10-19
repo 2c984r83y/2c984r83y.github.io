@@ -33,4 +33,13 @@ Event camera and stereo vision
 Ref: [在Vscode中使用Picgo插件](https://picgo.github.io/PicGo-Doc/zh/guide/config.html#github%E5%9B%BE%E5%BA%8A)
 
 ## 为什么要演奏春日影
-{% include embed/youtube.html id='W8DCWI_Gc9c' %}
+
+<iframe
+  class="embed-video youtube"
+  loading="lazy"
+  src="https://www.youtube.com/embed/W8DCWI_Gc9c"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+></iframe>
