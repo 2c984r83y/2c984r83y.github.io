@@ -34,7 +34,7 @@ order: 4
 `Ctrl + Alt + u`上传剪贴板中的图片。
 
 ## 为什么要演奏春日影
-
+Youtube:
 <iframe
   class="embed-video youtube"
   loading="lazy"
@@ -44,3 +44,5 @@ order: 4
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen
 ></iframe>
+Bilibili:
+<iframe loading="lazy" src="https://player.bilibili.com/player.html?aid=786483310&bvid=BV1v14y1z7MV&cid=1212521934&page=1&high_quality=1&danmaku=0&autoplay=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" frameborder="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
