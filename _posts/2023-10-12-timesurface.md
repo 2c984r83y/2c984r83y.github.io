@@ -3,7 +3,7 @@ title: 事件相机图像重构：浅谈Time-Surface
 author: 2c984r83y
 date: 2023-10-12 23:33:33 +0800
 categories: [TecDoc, Paper Reading]
-tags: [event-based vision, time-surface]
+tags: [Event-based vision, Time-surface]
 pin: false
 math: true
 mermaid: true

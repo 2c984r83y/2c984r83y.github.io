@@ -2,7 +2,7 @@
 title: Prophesee Mono Calibration
 author: 2c984r83y
 date: 2023-09-19 23:33:33 +0800
-categories: [Blogging]
+categories: [TecDoc]
 tags: [Event-based Vision, Calibration]
 pin: false
 pin: false
