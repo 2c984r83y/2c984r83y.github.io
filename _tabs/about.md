@@ -3,9 +3,9 @@
 icon: fas fa-info-circle
 order: 4
 ---
-> 不延毕就是成功
 
-> Event camera and stereo vision
+不延毕就是成功  
+Event camera and stereo vision
 
 ## 一顆蘋果🍎
 
@@ -34,14 +34,14 @@ order: 4
 `Ctrl + Alt + u`上传剪贴板中的图片。
 
 ## 为什么要演奏春日影
+
 Youtube:
 <iframe
   class="embed-video youtube"
   loading="lazy"
-  src="https://www.youtube.com/embed/W8DCWI_Gc9c"
+  src="<https://www.youtube.com/embed/W8DCWI_Gc9c>"
   title="YouTube video player"
   frameborder="0"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen
 ></iframe>
-
