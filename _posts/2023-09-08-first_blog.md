@@ -7,8 +7,6 @@ tags: [HelloWorld]
 pin: true
 math: true
 mermaid: true
-image:
-  path: /images/mygo_1080p.jpg
-  alt: HelloWorld!
+
 ---
 ## HelloWorld!
