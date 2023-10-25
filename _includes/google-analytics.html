@@ -1,14 +1,9 @@
-<!--
-  The GA snippet
--->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script defer src="https://www.googletagmanager.com/gtag/js?id=G-HZ4GW7XYRP"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HZ4GW7XYRP"></script>
 <script>
-  document.addEventListener("DOMContentLoaded", function(event) {
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    gtag('js', new Date());
-    gtag('config', '{{ site.google_analytics.id }}');
-  });
+  gtag('config', 'G-HZ4GW7XYRP');
 </script>
