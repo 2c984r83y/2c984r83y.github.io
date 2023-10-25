@@ -8,7 +8,7 @@ pin: true
 math: true
 mermaid: true
 image:
-  path: /images/mygo.jpg
+  path: /images/mygo_1080p.jpg
   alt: HelloWorld!
 ---
 ## HelloWorld!
