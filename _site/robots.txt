@@ -2,4 +2,4 @@ User-agent: *
 
 Disallow: /norobots/
 
-Sitemap: https://2c984r83y.github.io/tag/sitemap.xml
+Sitemap: https://2c984r83y.github.io/sitemap.xml
