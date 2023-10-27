@@ -41,11 +41,12 @@ const resource = [
 /* The request url with below domain will be cached */
 const allowedDomains = [
   
-
-  'localhost:4000',
-
+    'www.googletagmanager.com',
+    'www.google-analytics.com',
   
-    'chirpy-img.netlify.app',
+
+  '2c984r83y.github.io',
+
   
 
   'fonts.gstatic.com',

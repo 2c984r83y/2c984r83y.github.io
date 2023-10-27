@@ -1,40 +1,42 @@
 
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>http://localhost:4000/</id>
-  <title>Chirpy</title>
-  <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2023-10-18T21:08:32+08:00</updated>
+  <id>https://2c984r83y.github.io/</id>
+  <title>2c984r83y</title>
+  <subtitle>A blog under construction</subtitle>
+  <updated>2023-10-27T16:19:20+08:00</updated>
   <author>
-    <name>your_full_name</name>
-    <uri>http://localhost:4000/</uri>
+    <name>2c984r83y</name>
+    <uri>https://2c984r83y.github.io/</uri>
   </author>
-  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
-  <link rel="alternate" type="text/html" hreflang="en"
-    href="http://localhost:4000/"/>
+  <link rel="self" type="application/atom+xml" href="https://2c984r83y.github.io/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="zh-CN"
+    href="https://2c984r83y.github.io/"/>
   <generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator>
-  <rights> © 2023 your_full_name </rights>
+  <rights> © 2023 2c984r83y </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
 
   
   <entry>
-    <title>This is my fisrt blog</title>
-    <link href="http://localhost:4000/posts/first_blog/" rel="alternate" type="text/html" title="This is my fisrt blog" />
-    <published>2023-09-08T02:33:33+08:00</published>
+    <title>代码解读：Event-based Stereo Visual Odometry</title>
+    <link href="https://2c984r83y.github.io/posts/ESVO/" rel="alternate" type="text/html" title="代码解读：Event-based Stereo Visual Odometry" />
+    <published>2023-10-17T23:33:33+08:00</published>
   
-    <updated>2023-09-08T02:33:33+08:00</updated>
+    <updated>2023-10-27T12:48:27+08:00</updated>
   
-    <id>http://localhost:4000/posts/first_blog/</id>
-    <content src="http://localhost:4000/posts/first_blog/" />
+    <id>https://2c984r83y.github.io/posts/ESVO/</id>
+    <content src="https://2c984r83y.github.io/posts/ESVO/" />
     <author>
       <name>2c984r83y</name>
     </author>
 
   
     
-    <category term="Blogging" />
+    <category term="TecDoc" />
+    
+    <category term="Code Understanding" />
     
   
 
@@ -46,8 +48,19 @@
 
 
 
-      This is my first blog
+      Event-based Stereo Visual Odometry 提出了一种基于双目事件相机的视觉里程计。
+在 Github上开源了代码，项目主要由 Cpp 实现，运行环境为 ROS, 本文的重点并不是如何运行代码，所以忽略了 ROS 中节点以及 launch file.  挖个坑以后填上，本文旨在对其中的功能实现的部分关键代码进行解读。
 
+本文之后的部分将 Event-based Stereo Visual Odometry 简写为ESVO.
+为了提高计算效率，达到实时性的要求，ESVO 采用了多线程的方法，将计算任务分配给多个线程，同时进行计算。Cpp 多线程的操作有待深入学习。现在看不懂
+
+
+  TODO: Cpp Multithreading
+
+
+System Flowchart
+
+ESVO 的 flowchat 如下图所示，主要由三大部分组成，分别是 Event Pre...
     </summary>
   
 
@@ -55,23 +68,23 @@
 
   
   <entry>
-    <title>Customize the Favicon</title>
-    <link href="http://localhost:4000/posts/customize-the-favicon/" rel="alternate" type="text/html" title="Customize the Favicon" />
-    <published>2019-08-11T00:34:00+08:00</published>
+    <title>事件相机图像重构：浅谈Time-Surface</title>
+    <link href="https://2c984r83y.github.io/posts/timesurface/" rel="alternate" type="text/html" title="事件相机图像重构：浅谈Time-Surface" />
+    <published>2023-10-12T23:33:33+08:00</published>
   
-    <updated>2019-08-11T00:34:00+08:00</updated>
+    <updated>2023-10-20T17:34:54+08:00</updated>
   
-    <id>http://localhost:4000/posts/customize-the-favicon/</id>
-    <content src="http://localhost:4000/posts/customize-the-favicon/" />
+    <id>https://2c984r83y.github.io/posts/timesurface/</id>
+    <content src="https://2c984r83y.github.io/posts/timesurface/" />
     <author>
-      <name>cotes</name>
+      <name>2c984r83y</name>
     </author>
 
   
     
-    <category term="Blogging" />
+    <category term="TecDoc" />
     
-    <category term="Tutorial" />
+    <category term="Paper Reading" />
     
   
 
@@ -83,11 +96,17 @@
 
 
 
-      The favicons of Chirpy are placed in the directory assets/img/favicons/. You may want to replace them with your own. The following sections will guide you to create and replace the default favicons.
+      事件相机简介
 
-Generate the favicon
+事件相机只输出亮度变化超过一定阈值的像素坐标、时间戳与极性。因为事件流是异步产生的，与传统的固定事件曝光的图像相比富含更时空信息，所以将事件流转换为图像帧的算法至关重要，选对了算法就能发挥事件相机的高时间分辨率优势。事件相机与传统的高速相机相比，输出的事件流中不含冗余的背景图像信息，事件流只输出亮度变化超过阈值的运动物体的信息，这是我们感兴趣的，因此提高了处理速度，降低了数据量，避免使用过多的硬件资源，更利于实时计算。
 
-Prepare a square image (PNG, JPG, or SVG) with a size of 512x512 or more, and then go to the online tool Real Favicon Generator and click the button Select your Favicon image ...
+事件相机的一般输出形式是事件流，事件流可以表示成如下的形式：
+
+$ev_i=[\mathbf{x_i},t_i,p_i]^T,\quad i\in\mathbb{N},$
+
+$ev_i$是第i个事件，其坐标为$\mathbf{x_i}=[x_i,y_i]^T$
+
+时间戳$t_i$，极性$ p_{i}\in{-1,1}$，-1表示OFF事件，1表示ON...
     </summary>
   
 
@@ -95,23 +114,21 @@ Prepare a square image (PNG, JPG, or SVG) with a size of 512x512 or more, and th
 
   
   <entry>
-    <title>Getting Started</title>
-    <link href="http://localhost:4000/posts/getting-started/" rel="alternate" type="text/html" title="Getting Started" />
-    <published>2019-08-09T20:55:00+08:00</published>
+    <title>Prophesee Mono Calibration</title>
+    <link href="https://2c984r83y.github.io/posts/mono_calibration/" rel="alternate" type="text/html" title="Prophesee Mono Calibration" />
+    <published>2023-09-19T23:33:33+08:00</published>
   
-    <updated>2019-08-09T20:55:00+08:00</updated>
+    <updated>2023-10-20T17:34:54+08:00</updated>
   
-    <id>http://localhost:4000/posts/getting-started/</id>
-    <content src="http://localhost:4000/posts/getting-started/" />
+    <id>https://2c984r83y.github.io/posts/mono_calibration/</id>
+    <content src="https://2c984r83y.github.io/posts/mono_calibration/" />
     <author>
-      <name>cotes</name>
+      <name>2c984r83y</name>
     </author>
 
   
     
-    <category term="Blogging" />
-    
-    <category term="Tutorial" />
+    <category term="TecDoc" />
     
   
 
@@ -123,109 +140,167 @@ Prepare a square image (PNG, JPG, or SVG) with a size of 512x512 or more, and th
 
 
 
-      Prerequisites
+      Intrinsics Calibration
 
-Follow the instructions in the Jekyll Docs to complete the installation of the basic environment. Git also needs to be installed.
+
+
+建立相机成像几何模型并矫正透镜畸变。
+
+使用基于事件的2D角点检测对相机进行标定。
+
+
+  首先对闪烁棋牌格进行检测：
+
+
+代码路径如下所示：
+
+
+  &amp;lt;install-prefix&amp;gt;/share/metavision/sdk/calibration/apps/metavision_mono_calibration_recording
+
+
+
+  使用检测数据进行相机内参计算：
+
+
+代码路径如下所示：
+
+
+  &amp;lt;install-prefix&amp;gt;/share/metavision/sdk/calibration/apps/metavision_mono_calibration
+
+
+闪烁棋盘格与标定界面
+
+
+
+代码流水线结构
+
+
+
+Trail Stage
+
+使用 Metavision::TrailFilterAlgo...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>详解零均值归一化：ZNCC</title>
+    <link href="https://2c984r83y.github.io/posts/NCC_ZNCC/" rel="alternate" type="text/html" title="详解零均值归一化：ZNCC" />
+    <published>2023-09-12T23:33:33+08:00</published>
+  
+    <updated>2023-10-20T17:34:54+08:00</updated>
+  
+    <id>https://2c984r83y.github.io/posts/NCC_ZNCC/</id>
+    <content src="https://2c984r83y.github.io/posts/NCC_ZNCC/" />
+    <author>
+      <name>2c984r83y</name>
+    </author>
+
+  
+    
+    <category term="TecDoc" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      零均值归一化：ZNCC, 是一种进行双目深度估计的算法，主要思想为匹配左右目零均值归一化系数最小的两点。
+
+立体匹配与深度计算
+
+非基于深度学习的双目匹配算法大致分为四步：
+
+
+  采集图像
+  极线矫正
+  特征匹配
+  深度恢复
+
+
+NCC 与 ZNCC 是衡量特征匹配的算法，一般采用 WTA 的方法得到视差。
+
+双目视觉的几何原理并不是本文的重点，挖个坑以后再填
+
+标准差、方差、协方差、相关系数
+
+标准差
+
+标准差描述了变量在整体变化过程中偏离均值的幅度。
+
+\[\sigma = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(X_i-\overline{X})^{2}}\]
+
+标准差越小，说明数据越集中。
+
+所以在协方差中标准差作为分母对协方差进行了归一化。
+
+方差
+
+标准差的平方，衡量离散程度，计算每一个变量（观察值）与总体均数之间的差异。
+
+\[Var(X...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>RPG_EMVS</title>
+    <link href="https://2c984r83y.github.io/posts/rpg_emvs/" rel="alternate" type="text/html" title="RPG_EMVS" />
+    <published>2023-09-11T23:33:33+08:00</published>
+  
+    <updated>2023-10-20T17:34:54+08:00</updated>
+  
+    <id>https://2c984r83y.github.io/posts/rpg_emvs/</id>
+    <content src="https://2c984r83y.github.io/posts/rpg_emvs/" />
+    <author>
+      <name>2c984r83y</name>
+    </author>
+
+  
+    
+    <category term="TecDoc" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Introduction
+
+RPG_EMVS is the implementation of EMVS: Event-based Multi-View Stereo.
+
+You can find it here.
 
 Installation
 
-Creating a New Site
+Clone the responsity
 
-There are two ways to create a new repository for this theme:
-
-
-  Using the Chirpy Starter - Easy to upgrade, isolates irrelevant project files so you can focus on writing.
-  GitHub Fork - Convenient for custom devel...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Writing a New Post</title>
-    <link href="http://localhost:4000/posts/write-a-new-post/" rel="alternate" type="text/html" title="Writing a New Post" />
-    <published>2019-08-08T14:10:00+08:00</published>
-  
-    <updated>2019-08-08T14:10:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/write-a-new-post/</id>
-    <content src="http://localhost:4000/posts/write-a-new-post/" />
-    <author>
-      <name>cotes</name>
-    </author>
-
-  
-    
-    <category term="Blogging" />
-    
-    <category term="Tutorial" />
-    
-  
-
-  
-    <summary>
-      
+cd home\yousa\rosCatkinBuild\src
 
 
+git clone git@github.com:uzh-rpg/rpg_emvs.git
 
 
+Run sample
 
-      This tutorial will guide you how to write a post in the Chirpy template, and it’s worth reading even if you’ve used Jekyll before, as many features require specific variables to be set.
-
-Naming and Path
-
-Create a new file named YYYY-MM-DD-TITLE.EXTENSION and put it in the _posts of the root directory. Please note that the EXTENSION must be one of md and markdown. If you want to save time of cre...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Text and Typography</title>
-    <link href="http://localhost:4000/posts/text-and-typography/" rel="alternate" type="text/html" title="Text and Typography" />
-    <published>2019-08-08T11:33:00+08:00</published>
-  
-    <updated>2019-08-08T11:33:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/text-and-typography/</id>
-    <content src="http://localhost:4000/posts/text-and-typography/" />
-    <author>
-      <name>cotes</name>
-    </author>
-
-  
-    
-    <category term="Blogging" />
-    
-    <category term="Demo" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      This post is to show Markdown syntax rendering on Chirpy, you can also use it as an example of writing. Now, let’s start looking at text and typography.
-
-Headings
-
-H1 - heading
-
-H2 - heading
-
-H3 - heading
-
-H4 - heading
-
-Paragraph
-
-Quisque egestas convallis ipsum, ut sollicitudin risus tincidunt a. Maecenas interdum malesuada egestas. Duis consectetur porta risus, sit amet vulputate urna facilis...
+cd home\yousa\rosCatkinBuild\src\ros_emvc
+mkdir sample &amp;amp;&amp;amp; cd sample
+source /home/yousa/rosCatkinBuild/devel/setup.zsh
+rosrun mapper_emvs run_emvs --b...
     </summary>
   
 
