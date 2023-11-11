@@ -4,25 +4,12 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-~~疑似冒充技术博客~~  
-不延毕就是成功吗？  
-Event camera and stereo vision
-
-## 一顆蘋果🍎
-
-> 時間如果可以倒流
->
-> 我想我還是
->
-> 會卯起來蹉跎
->
-> 反正就這樣吧
->
-> 我知道我努力過
-
 ## About this blog
 
-本站采用 [Jekyll](https://jekyllrb.com/) 主题 [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy).
+~~疑似冒充技术博客~~  
+不延毕就是成功吗？    
+Event camera and stereo vision  
+本博客基于 [Jekyll](https://jekyllrb.com/) 主题 [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) 构建.
 
 曾经使用 [Jekyll](https://jekyllrb.com/) 主题 [LOFFER](https://fromendworld.github.io/LOFFER/), 你可以 [点击这里](https://2c984r83y.github.io/first_blog/) 看看过去的样子。
 
