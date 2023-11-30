@@ -17,7 +17,3 @@ Interest in:
 
 - Event-based vision
 - Stereo vision
-
-## Contact me
-
-Email: <zhao32450039@gmail.com>
