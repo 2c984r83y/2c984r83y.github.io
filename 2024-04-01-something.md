@@ -1,5 +1,5 @@
 ---
-title: 实验进程
+title: Something
 author: 2c984r83y
 date: 2024-04-01 23:33:33 +0800
 categories: [Blogging]
@@ -25,7 +25,9 @@ disp应当使用int16的，而不是除以256后的int8类型，这会影响精�
    ![20240402214726](https://raw.githubusercontent.com/2c984r83y/picgo_picbed/main/blog_img/20240402214726.png)
 3. 重构为三通道归一化图像
    15个通道压缩为三个并归一化
-   > 这样会更好吗？  
+
+   > 这样会更好吗？
+   >
 
    25735张，9:1
    ![20240402214747](https://raw.githubusercontent.com/2c984r83y/picgo_picbed/main/blog_img/20240402214747.png)
@@ -43,12 +45,11 @@ parser.add_argument('--lr', type=float, default=0.001, help='base learning rate'
 parser.add_argument('--lrepochs',default="100,200,220,300:10", type=str,  help='the epochs to decay lr: the downscale rate')
 ```
 
-`/disk2/users/M22_zhaoqinghao/BGNet/logs_dsec_png`  
+`/disk2/users/M22_zhaoqinghao/BGNet/logs_dsec_png`
 1px:17.16%
 ![20240402215435](https://raw.githubusercontent.com/2c984r83y/picgo_picbed/main/blog_img/20240402215435.png)
 
 1.2 BGNet+Coordattention+Png
-
 
 2.ACVNet
 
