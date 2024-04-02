@@ -34,8 +34,15 @@ disp应当使用int16的，而不是除以256后的int8类型，这会影响精�
 
 ## Baseline
 
-1.BGNet_Plus
-1.1 BGNet+PNG
+### BGNet_Plus
+
+#### BGNet+PNG
+
+1px:17.16%
+
+`/disk2/users/M22_zhaoqinghao/BGNet/logs_dsec_png`
+
+![20240402215435](https://raw.githubusercontent.com/2c984r83y/picgo_picbed/main/blog_img/20240402215435.png)
 
 ```python
 parser.add_argument('--batch_size', type=int, default=32, help='training batch size')
@@ -44,10 +51,6 @@ parser.add_argument('--epochs', type=int, default=400, help='number of epochs to
 parser.add_argument('--lr', type=float, default=0.001, help='base learning rate')
 parser.add_argument('--lrepochs',default="100,200,220,300:10", type=str,  help='the epochs to decay lr: the downscale rate')
 ```
-
-`/disk2/users/M22_zhaoqinghao/BGNet/logs_dsec_png`
-1px:17.16%
-![20240402215435](https://raw.githubusercontent.com/2c984r83y/picgo_picbed/main/blog_img/20240402215435.png)
 
 1.2 BGNet+Coordattention+Png
 
