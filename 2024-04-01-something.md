@@ -9,11 +9,20 @@ pin: false
 **为什么不涨点？!**
 ![20240402214836](https://raw.githubusercontent.com/2c984r83y/picgo_picbed/main/blog_img/20240402214836.png)
 
+## SECFF
+
+将10通道的事件不断减少1/2的数量, 直到10层, 然后放入ResNet中
+
 ## Dataset
 
-DSEC 数据集无法在机械硬盘上快速读取，dataloader会卡住。一次性读取15张png也会卡住。
+>disp应当使用int16的，而不是除以256后的int8类型，这会影响精度。  
 
-disp应当使用int16的，而不是除以256后的int8类型，这会影响精度。
+### DSEC
+
+数据集激光雷达 Ground Truth 为 10 Hz, 数据集 Dataloader 默认取每个 Ground Truth 前 50ms 的事件.
+> 50ms 与 100ms 会影响精度吗?  
+
+DSEC 数据集无法在机械硬盘上快速读取，dataloader会卡住。一次性读取15张png也会卡住。
 
 1. 重构为单通道图像
    15个通道压缩为一个
@@ -57,3 +66,4 @@ parser.add_argument('--lrepochs',default="100,200,220,300:10", type=str,  help='
 2.ACVNet
 
 3.Fast-ACVNet
+
