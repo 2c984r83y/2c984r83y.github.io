@@ -30,7 +30,7 @@ DSEC 数据集无法在机械硬盘上快速读取，dataloader会卡住。一�
 
 > disp 应当使用 int16 的，而不是除以 256 后的 int8 类型，这会影响精度。  
 
-![20240414235819](https://raw.githubusercontent.com/2c984r83y/picgo_picbed/main/blog_img/20240414235819.png)
+![20240414235819](https://raw.githubusercontent.com/2c984r83y/picgo_picbed/main/blog_img/000001.png)
 
 #### png_1c
 
