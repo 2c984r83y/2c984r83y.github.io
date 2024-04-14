@@ -45,8 +45,6 @@ DSEC 数据集无法在机械硬盘上快速读取，dataloader会卡住。一�
 
  重构为三通道归一化图像(25735张，9:1)
  15个通道压缩为三个通道，忽略极性，灰度归一化到0-255
-
-   25735张，9:1
    ![20240402214747](https://raw.githubusercontent.com/2c984r83y/picgo_picbed/main/blog_img/20240402214747.png)
 
 #### png_3c_m
