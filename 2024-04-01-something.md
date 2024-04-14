@@ -26,25 +26,40 @@ pin: false
 
 DSEC 数据集无法在机械硬盘上快速读取，dataloader会卡住。一次性读取15张png也会卡住。
 
-1. 重构为单通道图像(26343张，99:1)
+#### png_1c
+
+   重构为单通道图像 (26343张，99:1)
    15个通道累加为一个通道，
    
    ![20240402214659](https://raw.githubusercontent.com/2c984r83y/picgo_picbed/main/blog_img/20240402214659.png)
-2. 重构为三通道图像(26343张，9:1)
+
+#### png_3c
+
+   重构为三通道图像(26343张，9:1)
    15个通道压缩为三个
-   
+
    ![20240402214726](https://raw.githubusercontent.com/2c984r83y/picgo_picbed/main/blog_img/20240402214726.png)
-3. 重构为三通道归一化图像(26343张，9:1)
+
+#### png_3c_n
+
+ 重构为三通道归一化图像(26343张，9:1)
    15个通道压缩为三个并归一化
    > 这样会更好吗？
    > 不会
    25735张，9:1
    ![20240402214747](https://raw.githubusercontent.com/2c984r83y/picgo_picbed/main/blog_img/20240402214747.png)
-4. 重构为三通道中值图像(26343张，9:1)
+
+#### png_3c_m
+
+   重构为三通道中值图像(26343张，9:1)
    
 ## Baseline
 
-### BGNet_Plus
+### Fast-ACVNet
+
+### ACVNet
+
+### BGNet
 
 #### BGNet+PNG
 
@@ -63,8 +78,3 @@ parser.add_argument('--lrepochs',default="100,200,220,300:10", type=str,  help='
 ```
 
 1.2 BGNet+Coordattention+Png
-
-2.ACVNet
-
-3.Fast-ACVNet
-
