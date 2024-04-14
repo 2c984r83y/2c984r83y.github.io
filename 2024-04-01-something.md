@@ -17,7 +17,7 @@ pin: false
 
 ## Dataset
 
->disp应当使用int16的，而不是除以256后的int8类型，这会影响精度。  
+> disp 应当使用 int16 的，而不是除以 256 后的 int8 类型，这会影响精度。  
 
 ### DSEC
 
@@ -26,23 +26,22 @@ pin: false
 
 DSEC 数据集无法在机械硬盘上快速读取，dataloader会卡住。一次性读取15张png也会卡住。
 
-1. 重构为单通道图像
-   15个通道压缩为一个
-   26343张，99:1
+1. 重构为单通道图像(26343张，99:1)
+   15个通道累加为一个通道，
+   
    ![20240402214659](https://raw.githubusercontent.com/2c984r83y/picgo_picbed/main/blog_img/20240402214659.png)
-2. 重构为三通道图像
+2. 重构为三通道图像(26343张，9:1)
    15个通道压缩为三个
-   26343张，99:1
+   
    ![20240402214726](https://raw.githubusercontent.com/2c984r83y/picgo_picbed/main/blog_img/20240402214726.png)
-3. 重构为三通道归一化图像
+3. 重构为三通道归一化图像(26343张，9:1)
    15个通道压缩为三个并归一化
-
    > 这样会更好吗？
-   >
-
+   > 不会
    25735张，9:1
    ![20240402214747](https://raw.githubusercontent.com/2c984r83y/picgo_picbed/main/blog_img/20240402214747.png)
-
+4. 重构为三通道中值图像(26343张，9:1)
+   
 ## Baseline
 
 ### BGNet_Plus
