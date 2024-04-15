@@ -6,7 +6,7 @@ categories: [Blogging]
 tags: [HelloWorld]
 pin: false
 ---
-**为什么不涨点？!**  
+**为什么不涨点？!**
 
 **涨了!**
 ![20240414173245](https://raw.githubusercontent.com/2c984r83y/picgo_picbed/main/blog_img/20240414173245.png)
@@ -22,13 +22,13 @@ pin: false
 
 数据集激光雷达 Ground Truth 为 10 Hz, 数据集 Dataloader 默认取每个 Ground Truth 前 50ms 的事件.构建为voxel, 默认维度为 15*640*480.
 
-> 50ms 与 100ms 会影响精度吗?  
+> 50ms 与 100ms 会影响精度吗?
 
 DSEC 数据集无法在机械硬盘上快速读取，dataloader会卡住。一次性读取15张png也会卡住。
 
 #### disp(GroundTruth)
 
-> disp 应当使用 int16 的，而不是除以 256 后的 int8 类型，这会影响精度。  
+> disp 应当使用 int16 的，而不是除以 256 后的 int8 类型，这会影响精度。
 
 ![20240414235819](https://raw.githubusercontent.com/2c984r83y/picgo_picbed/main/blog_img/000001.png)
 
@@ -52,11 +52,12 @@ DSEC 数据集无法在机械硬盘上快速读取，dataloader会卡住。一�
  15个通道压缩为三个通道，忽略极性，灰度归一化到0-255
    ![20240402214747](https://raw.githubusercontent.com/2c984r83y/picgo_picbed/main/blog_img/20240402214747.png)
 
-#### png_3c_m
+#### *png_3c_m*
 
    重构为三通道中值图像(25735张，9:1)
    15个通道压缩为三个通道，不忽略极性，没有事件的地方灰度值为 128，负极性减少灰度值，正极性增加灰度值，灰度值归一化到0-255
    ![20240414235713](https://raw.githubusercontent.com/2c984r83y/picgo_picbed/main/blog_img/20240414235713.png)
+
 ## Baseline
 
 ### Fast-ACVNet
@@ -65,22 +66,10 @@ DSEC 数据集无法在机械硬盘上快速读取，dataloader会卡住。一�
 
 ### ACVNet
 
+
+
 ### BGNet
 
-#### BGNet+PNG
+指标不理想,暂不考虑作为baseline
 
-1px:17.16%
-
-`/disk2/users/M22_zhaoqinghao/BGNet/logs_dsec_png`
-
-![20240402215435](https://raw.githubusercontent.com/2c984r83y/picgo_picbed/main/blog_img/20240402215435.png)
-
-```python
-parser.add_argument('--batch_size', type=int, default=32, help='training batch size')
-parser.add_argument('--test_batch_size', type=int, default=16, help='testing batch size')
-parser.add_argument('--epochs', type=int, default=400, help='number of epochs to train')
-parser.add_argument('--lr', type=float, default=0.001, help='base learning rate')
-parser.add_argument('--lrepochs',default="100,200,220,300:10", type=str,  help='the epochs to decay lr: the downscale rate')
-```
-
-1.2 BGNet+Coordattention+Png
+![20240415151340](https://raw.githubusercontent.com/2c984r83y/picgo_picbed/main/blog_img/20240415151340.png)
