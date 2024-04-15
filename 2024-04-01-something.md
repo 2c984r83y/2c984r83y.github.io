@@ -6,9 +6,7 @@ categories: [Blogging]
 tags: [HelloWorld]
 pin: false
 ---
-**为什么不涨点？!**
 
-**涨了!**
 ![20240414173245](https://raw.githubusercontent.com/2c984r83y/picgo_picbed/main/blog_img/20240414173245.png)
 
 ## SECFF
@@ -28,16 +26,18 @@ DSEC 数据集无法在机械硬盘上快速读取，dataloader会卡住。一�
 
 #### disp(GroundTruth)
 
-> disp 应当使用 int16 的，而不是除以 256 后的 int8 类型，这会影响精度。
+视差 disparity 真值 GroundTruth 图像来自于激光雷达, 10FPS.  
 
-![20240414235819](https://raw.githubusercontent.com/2c984r83y/picgo_picbed/main/blog_img/000001.png)
+> disp 使用时需要除以256,使用浮点类型确保精度
+
+![20240415152212](https://raw.githubusercontent.com/2c984r83y/picgo_picbed/main/blog_img/20240415152212.png)
 
 #### png_1c
 
    重构为单通道图像 (26343张，99:1)
    15个通道累加为一个通道，忽略极性，灰度归一化到0-255
 
-   ![20240402214659](https://raw.githubusercontent.com/2c984r83y/picgo_picbed/main/blog_img/20240402214659.png)
+   ![20240414235819](https://raw.githubusercontent.com/2c984r83y/picgo_picbed/main/blog_img/000001.png)
 
 #### png_3c
 
