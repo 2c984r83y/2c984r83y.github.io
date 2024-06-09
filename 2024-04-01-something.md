@@ -12,7 +12,7 @@ pin: false
 ## SECFF
 
 将10通道的事件不断减少1/2的数量, 直到10层, 然后放入ResNet中
-![20240402214836](https://raw.githubusercontent.com/2c984r83y/picgo_picbed/main/blog_img/20240402214836.png)
+
 
 ## Dataset
 
