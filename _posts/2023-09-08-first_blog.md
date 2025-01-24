@@ -7,5 +7,5 @@ tags: [HelloWorld]
 pin: true
 image:
   path: /images/mygo_1080p.jpg
-  alt: MyGO!!!!!
+  alt: MyGO!!!!
 ---
